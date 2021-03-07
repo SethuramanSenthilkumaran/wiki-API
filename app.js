@@ -24,7 +24,6 @@ app.route("/articles")
   .get(function(req,res){
     Article.find(function(err, foundArticles){
       if(!err){
-
         res.send(foundArticles);
       }else{
         res.send(err);
@@ -33,7 +32,6 @@ app.route("/articles")
   })
 
   .post(function(req,res){
-
       const newArticle = new Article({
         title: req.body.title,
         content: req.body.content
